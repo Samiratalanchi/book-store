@@ -2,32 +2,32 @@
     "products": [
         {
             "id": 1,
-            "title": "کتاب کامپیوتر",
+            "title": "Hardware Book",
             "price": 129000
         },
         {
             "id": 2,
-            "title": "کتاب زبان",
+            "title": "Software Book",
             "price": 99000
         },
         {
             "id": 3,
-            "title": "کتاب هنر",
+            "title": "Art Book",
             "price": 133000
         },
         {
             "id": 4,
-            "title": "کتاب ریاضی",
+            "title": "Inteligence Book",
             "price": 121000
         },
         {
             "id": 5,
-            "title": "کتاب کودک",
+            "title": "Kids Book",
             "price": 73000
         },
         {
             "id": 6,
-            "title": "کتاب تاریخ",
+            "title": "History Book",
             "price": 230000
         }
     ]
