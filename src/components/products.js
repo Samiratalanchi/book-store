@@ -5,7 +5,7 @@ class Products extends React.Component {
         const productItems = this.props.products.map(product =>
             <div className="col-md-4 text-center product" key={product.id}>
                 <div>
-                    <img src={`./products/${product.id}.jpg`}></img>
+                    <img src={`./products/${product.id}.jpg`} alt=""></img>
                 </div>
                 <div>
                     <p>
@@ -15,11 +15,11 @@ class Products extends React.Component {
                         {product.price}
                     </p>
                     <button className="btn btn-primary">
-                        افزودن به سبد خرید
+                            افزودن به سبد خرید
                     </button>
                 </div>
             </div>
-            )
+        )
         return(
           <div className="row">
               {productItems}
