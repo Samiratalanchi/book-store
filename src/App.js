@@ -9,7 +9,7 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { products: [] }
+    this.state = { products: [], cartItems: []}
   }
 
   componentWillMount() {
@@ -28,7 +28,7 @@ class App extends React.Component {
             <Products products={this.state.products} />
           </div>
           <div className="col-md-4">
-            <Cart />
+            <Cart cartItems={this.state.cartItems} />
           </div>
         </div>
       </div>
