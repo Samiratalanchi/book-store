@@ -4,7 +4,7 @@ class Products extends React.Component {
     render() {
         return(
           <div>
-            Mahsoolat
+            محصولات
           </div>
         )
     }
