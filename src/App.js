@@ -11,6 +11,7 @@ class App extends React.Component {
     super(props);
     this.state = { products: [], cartItems: []}
     this.handleAddToCart = this.handleAddToCart.bind(this)
+    this.handleRemove = this.handleRemove.bind(this)
   }
 
   componentWillMount() {
@@ -39,6 +40,14 @@ class App extends React.Component {
     })
   }
 
+  handleRemove(e,item) {
+    this.setState(state => {
+      const cartItems = state.cartItems.filter(p => p.id !== item.id)
+      localStorage.setItem('cartItems',cartItems)
+      return {cartItems}
+    })
+  }
+
   render() {
     return(
       <div className = "container-fluid" >
@@ -50,7 +59,10 @@ class App extends React.Component {
             />
           </div>
           <div className = "col-md-4">
-            <Cart cartItems = {this.state.cartItems} />
+            <Cart
+            cartItems = {this.state.cartItems}
+            handleRemove = {this.handleRemove}
+            />
           </div>
         </div>
       </div>
