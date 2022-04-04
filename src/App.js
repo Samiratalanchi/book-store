@@ -15,11 +15,17 @@ class App extends React.Component {
   }
 
   componentWillMount() {
-    fetch("http://localhost:8000/products/")
-    .then(res => res.json())
-    .then(data => this.setState({
-      products: data
-    }))
+    fetch("http://localhost:8000/products")
+      .then(res => res.json())
+      .then(data => this.setState({
+        products: data
+      }))
+      
+      if(localStorage.getItem('cartItems')) {
+        this.setState({
+          cartItems: JSON.parse(localStorage.getItem('cartItems'))
+        })
+      }
   }
 
   handleAddToCart(e , product) {
